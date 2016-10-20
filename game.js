@@ -539,7 +539,7 @@ BigAlien = function () {
 
     this.delayBeforeBullet -= delta;
     if (this.delayBeforeBullet <= 0) {
-      this.delayBeforeBullet = 22;
+      this.delayBeforeBullet = 10;
       for (var i = 0; i < this.bullets.length; i++) {
         if (!this.bullets[i].visible) {
           bullet = this.bullets[i];
@@ -682,7 +682,7 @@ Asteroid = function () {
           roid.points.reverse();
         }
         roid.vel.rot = Math.random() * 2 - 1;
-        roid.move(roid.scale * 3); // give them a little push
+        roid.move(roid.scale * 2); // give them a little push
         Game.sprites.push(roid);
       }
     }
